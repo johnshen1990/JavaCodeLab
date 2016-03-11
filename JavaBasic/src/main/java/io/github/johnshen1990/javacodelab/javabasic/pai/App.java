@@ -73,7 +73,6 @@ public class App {
             g2d.dispose();
             // 保存文件
             ImageIO.write(image, "png", new File("/Users/john/test.png"));
-            System.out.println("hello");
         }
         catch(Exception ex)
         {
