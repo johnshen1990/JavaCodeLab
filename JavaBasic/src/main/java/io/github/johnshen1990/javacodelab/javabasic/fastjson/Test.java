@@ -10,13 +10,13 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
  */
 public class Test {
     public static void main(String[] args) {
-        Dog dog = new Dog();
-        dog.setName("Tom");
-        dog.setColor(Color.BLACK);
-        String jsonString = JSON.toJSONString(dog);
+//        Dog dog = new Dog();
+//        dog.setName("Tom");
+//        dog.setColor(Color.BLACK);
+        String jsonString = "{\"name\":\"Tome\",\"mRoomId\":\"102\"}";
         System.out.println(jsonString);
         Dog dog2 = JSON.parseObject(jsonString, Dog.class);
         System.out.println("dog2.name=" + dog2.getName());
-        System.out.println("dog2.color=" + dog2.getColor());
+        System.out.println("dog2.color=" + dog2.getmRoomId());
     }
 }

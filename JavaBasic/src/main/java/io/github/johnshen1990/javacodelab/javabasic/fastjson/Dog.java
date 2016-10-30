@@ -12,8 +12,11 @@ public class Dog {
     @JSONField(name="name")
     private String name;
 
-    @JSONField(name="color")
-    private Color color;
+//    @JSONField(name="color")
+//    private Color color;
+
+    @JSONField(name = "mRoomId")
+    private String mRoomId;
 
     public String getName() {
         return name;
@@ -23,11 +26,12 @@ public class Dog {
         this.name = name;
     }
 
-    public Color getColor() {
-        return color;
-    }
+//    public Color getColor() {
+//        return color;
+//    }
+//
+//    public void setColor(Color color) {
+//        this.color = color;
+//    }
 
-    public void setColor(Color color) {
-        this.color = color;
-    }
 }
