@@ -17,6 +17,5 @@ public class Test {
         System.out.println(jsonString);
         Dog dog2 = JSON.parseObject(jsonString, Dog.class);
         System.out.println("dog2.name=" + dog2.getName());
-        System.out.println("dog2.color=" + dog2.getmRoomId());
     }
 }
