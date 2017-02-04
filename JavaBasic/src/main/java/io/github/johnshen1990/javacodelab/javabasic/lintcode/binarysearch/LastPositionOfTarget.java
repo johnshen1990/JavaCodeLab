@@ -1,4 +1,4 @@
-package io.github.johnshen1990.javacodelab.javabasic.lintcode;
+package io.github.johnshen1990.javacodelab.javabasic.lintcode.binarysearch;
 //import org.junit.Test;
 
 import org.springframework.util.Assert;

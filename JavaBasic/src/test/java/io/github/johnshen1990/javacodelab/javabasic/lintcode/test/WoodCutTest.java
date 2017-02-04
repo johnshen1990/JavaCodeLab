@@ -1,6 +1,6 @@
 package io.github.johnshen1990.javacodelab.javabasic.lintcode.test;
 
-import io.github.johnshen1990.javacodelab.javabasic.lintcode.WoodCut;
+import io.github.johnshen1990.javacodelab.javabasic.lintcode.binarysearch.WoodCut;
 import org.junit.Assert;
 import org.junit.Test;
 

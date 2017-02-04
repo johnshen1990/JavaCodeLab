@@ -1,6 +1,6 @@
 package io.github.johnshen1990.javacodelab.javabasic.lintcode.test;
 
-import io.github.johnshen1990.javacodelab.javabasic.lintcode.FirstPositionOfTarget;
+import io.github.johnshen1990.javacodelab.javabasic.lintcode.binarysearch.FirstPositionOfTarget;
 import org.junit.Assert;
 import org.junit.Test;
 

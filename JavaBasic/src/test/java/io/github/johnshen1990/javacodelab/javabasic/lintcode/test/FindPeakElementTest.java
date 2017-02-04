@@ -1,6 +1,6 @@
 package io.github.johnshen1990.javacodelab.javabasic.lintcode.test;
 
-import io.github.johnshen1990.javacodelab.javabasic.lintcode.FindPeakElement;
+import io.github.johnshen1990.javacodelab.javabasic.lintcode.binarysearch.FindPeakElement;
 import org.junit.Assert;
 import org.junit.Test;
 

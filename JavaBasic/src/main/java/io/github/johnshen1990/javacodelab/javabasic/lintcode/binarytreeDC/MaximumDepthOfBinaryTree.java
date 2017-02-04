@@ -1,4 +1,6 @@
-package io.github.johnshen1990.javacodelab.javabasic.lintcode;
+package io.github.johnshen1990.javacodelab.javabasic.lintcode.binarytreeDC;
+
+import io.github.johnshen1990.javacodelab.javabasic.lintcode.TreeNode;
 
 /**
  * Author: zhun.shen
