@@ -1,7 +1,5 @@
 package io.github.johnshen1990.javacodelab.javabasic.lintcode;
 
-import com.sun.xml.internal.xsom.impl.scd.Iterators;
-
 import java.util.ArrayList;
 
 /**
