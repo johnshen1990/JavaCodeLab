@@ -23,7 +23,7 @@
         View resolvers can also be configured with ResourceBundles or XML files. If you need
         different view resolving based on Locale, you have to use the resource bundle resolver.
     -->
-    <bean id="freeMarkerViewResolverr" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+    <bean id="freeMarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
         <property name="cache" value="false"/>
         <property name="prefix" value=""/>
         <property name="suffix" value=".ftl"/>
