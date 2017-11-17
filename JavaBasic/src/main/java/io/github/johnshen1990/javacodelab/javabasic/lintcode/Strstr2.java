@@ -16,9 +16,9 @@ public class Strstr2 {
 
     /**
      * 使用Rabin-Karp算法
-     * @param source
-     * @param target
-     * @return
+     * @param source "abcde"
+     * @param target "cde"
+     * @return 2
      */
     public static int strStr2(String source, String target) {
         // 容错
@@ -27,62 +27,55 @@ public class Strstr2 {
         }
         int n = source.length();
         int m = target.length();
-
+        // target = ""
         if(m == 0) {
             return 0;
         }
-
+        // source = "abc", target = "abcde"
         if(n < m) {
             return -1;
         }
-
-
-        // BASE = 10^6
-        int BASE = 1000000;
-
+        // HASH_SIZE = 10^6
+        int HASH_SIZE = 1000000;
         // pow = 31^m
         int pow = 1;
-        for(int i = 0; i < m; i++) {
-            pow = pow * 31 % BASE;
+        for(int i = 0; i < m; i++) { // O(m)
+            pow = pow * 31 % HASH_SIZE;
         }
-
         // targetCode = hash(target)
         int targetCode = 0;
-        for(int i = 0; i < m; i++) {
-            targetCode = (targetCode * 31 + target.charAt(i)) % BASE;
+        for(int i = 0; i < m; i++) { // O(m)
+            targetCode = (targetCode * 31 + target.charAt(i)) % HASH_SIZE;
         }
-
-        // source = abcde
-        // target = cde
-
         // hash(abc)
         int hashCode = 0;
-        for(int i = 0; i < m; i++) {
-            hashCode = (hashCode * 31 + source.charAt(i)) % BASE;
+        for(int i = 0; i < m; i++) { // O(m)
+            hashCode = (hashCode * 31 + source.charAt(i)) % HASH_SIZE;
         }
-
-        for(int i = 0; i <= n - m; i++) {
+        for(int i = 0; i <= n - m; i++) { // O(n-m+1)
             if(hashCode == targetCode) {
                 String subStr = source.substring(i, i + m);
-                if(subStr.equals(target)) {
+                int j;
+                for(j = 0; j < m; j++) { // O(m)
+                    if(subStr.charAt(j) != target.charAt(j)) {
+                        break;
+                    }
+                }
+                if(j >= m) {
                     return i;
                 }
             }
-
-            if(i < n - m) {
-                // hash(abc) --> hash(abcd)
-                hashCode = (hashCode * 31 + source.charAt(i + m)) % BASE;
-
-                // hash(abcd) --> hash(bcd)
-                hashCode = hashCode - source.charAt(i) * pow % BASE;
-
-                if(hashCode < 0) {
-                    hashCode += BASE;
-                }
+            if(i == n - m) {
+                continue;
             }
-
+            // hash(abc) --> hash(abcd)
+            hashCode = (hashCode * 31 + source.charAt(i + m)) % HASH_SIZE;
+            // hash(abcd) --> hash(bcd)
+            hashCode = hashCode - source.charAt(i) * pow % HASH_SIZE;
+            if(hashCode < 0) {
+                hashCode += HASH_SIZE;
+            }
         }
-
         return -1;
     }
 }

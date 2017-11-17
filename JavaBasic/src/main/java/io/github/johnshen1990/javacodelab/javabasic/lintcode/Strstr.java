@@ -16,9 +16,6 @@ public class Strstr {
 
     /**
      * 朴素匹配法
-     * @param source
-     * @param target
-     * @return
      */
     public static int strStr(String source, String target) {
         // 容错
@@ -27,27 +24,28 @@ public class Strstr {
         }
         int n = source.length();
         int m = target.length();
-
+        // target = ""
         if(m == 0) {
             return 0;
         }
-
+        // source = "abc", target = "abcde"
         if(n < m) {
             return -1;
         }
-
         for(int i = 0; i <= n - m; i++) {
-            int j;
-            for(j = 0; j < m; j++) {
-                if(source.charAt(i + j) != target.charAt(j)) {
-                    break;
+            String subStr = source.substring(i, i + m);
+            if(subStr.hashCode() == target.hashCode()) {
+                int j;
+                for(j = 0; j < m; j++) {
+                    if(subStr.charAt(j) != target.charAt(j)) {
+                        break;
+                    }
+                }
+                if(j >= m) {
+                    return i;
                 }
             }
-            if(j >= m) {
-                return i;
-            }
         }
-
         return -1;
     }
 

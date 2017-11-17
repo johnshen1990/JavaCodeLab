@@ -10,12 +10,15 @@ import java.util.Set;
  */
 public class TestBoolean {
     public static void main(String[] args) {
-        String src = "abcabd";
-        Set<String> dict = new HashSet<>();
-        dict.add("ab");
-        dict.add("abcd");
+//        String src = "abcabd";
+//        Set<String> dict = new HashSet<>();
+//        dict.add("ab");
+//        dict.add("abcd");
 
-        System.out.println(new TestBoolean().minLength(src, dict));
+//        System.out.println(new TestBoolean().minLength(src, dict));
+        double a = 1.1;
+        System.out.println(a / 1);
+        System.out.println(a % 1);
     }
 
     public int minLength(String s, Set<String> dict) {

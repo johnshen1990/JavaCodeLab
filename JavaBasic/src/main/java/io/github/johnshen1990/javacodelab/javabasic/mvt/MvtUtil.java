@@ -23,8 +23,8 @@ public class MvtUtil {
 
 
     public static int hash(String key){
-        return Math.abs(key.hashCode());
-//        return Math.abs(Hashing.murmur3_32().hashString(key, Charset.forName("UTF-8")).asInt());
+//        return Math.abs(key.hashCode());
+        return Math.abs(Hashing.murmur3_32().hashString(key, Charset.forName("UTF-8")).asInt());
     }
 
     public static void main(String[] args) {
