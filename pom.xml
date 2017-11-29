@@ -11,8 +11,6 @@
 
     <modules>
         <module>JavaBasic</module>
-        <module>JavaWebApp</module>
-        <module>JavaCache</module>
     </modules>
 
     <dependencyManagement>
